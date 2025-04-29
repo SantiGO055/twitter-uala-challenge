@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterUalaChallenge.Common", "TwitterUalaChallenge.Common\TwitterUalaChallenge.Common.csproj", "{7E10073F-1825-4577-87F5-588C1C301786}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterUalaChallenge.Domain", "TwitterUalaChallenge.Domain\TwitterUalaChallenge.Domain.csproj", "{444FC306-994F-412C-8788-EE9D59F9C04D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterUalaChallenge.Application", "TwitterUalaChallenge.Application\TwitterUalaChallenge.Application.csproj", "{6A76B4B9-0F63-4383-89D7-8D0705A7F1B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterUalaChallenge.Infrastructure", "TwitterUalaChallenge.Infrastructure\TwitterUalaChallenge.Infrastructure.csproj", "{C103DEAF-07B9-46E0-843D-91A1D5A801A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterUalaChallenge.Contracts", "TwitterUalaChallenge.Contracts\TwitterUalaChallenge.Contracts.csproj", "{E3897C7F-5EB2-4B7D-ACA6-36ECD14ABB45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterUalaChallenge.API", "TwitterUalaChallenge.API\TwitterUalaChallenge.API.csproj", "{CC441708-FD1E-46B3-8011-792D345216A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7E10073F-1825-4577-87F5-588C1C301786}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E10073F-1825-4577-87F5-588C1C301786}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E10073F-1825-4577-87F5-588C1C301786}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E10073F-1825-4577-87F5-588C1C301786}.Release|Any CPU.Build.0 = Release|Any CPU
+		{444FC306-994F-412C-8788-EE9D59F9C04D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{444FC306-994F-412C-8788-EE9D59F9C04D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{444FC306-994F-412C-8788-EE9D59F9C04D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{444FC306-994F-412C-8788-EE9D59F9C04D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A76B4B9-0F63-4383-89D7-8D0705A7F1B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A76B4B9-0F63-4383-89D7-8D0705A7F1B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A76B4B9-0F63-4383-89D7-8D0705A7F1B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A76B4B9-0F63-4383-89D7-8D0705A7F1B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C103DEAF-07B9-46E0-843D-91A1D5A801A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C103DEAF-07B9-46E0-843D-91A1D5A801A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C103DEAF-07B9-46E0-843D-91A1D5A801A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C103DEAF-07B9-46E0-843D-91A1D5A801A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3897C7F-5EB2-4B7D-ACA6-36ECD14ABB45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3897C7F-5EB2-4B7D-ACA6-36ECD14ABB45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3897C7F-5EB2-4B7D-ACA6-36ECD14ABB45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3897C7F-5EB2-4B7D-ACA6-36ECD14ABB45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC441708-FD1E-46B3-8011-792D345216A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC441708-FD1E-46B3-8011-792D345216A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC441708-FD1E-46B3-8011-792D345216A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC441708-FD1E-46B3-8011-792D345216A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
