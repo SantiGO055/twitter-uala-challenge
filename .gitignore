@@ -333,4 +333,4 @@ ASALocalRun/
 .sonarqube/
 sonarqubecoverage/
 **/.tye/*
-/Farmaonline.Pedidos.Core/.dockerignore
+.env

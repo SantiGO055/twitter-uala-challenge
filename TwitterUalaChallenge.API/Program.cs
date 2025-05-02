@@ -31,7 +31,7 @@ builder.Host
 
 var app = builder.Build();
 
-app.UsePathBase("/{{API-PATH}}");
+app.UsePathBase("/twitter-uala-challenge");
 app.UseRouting();
 
 ApplyMigrations(app);

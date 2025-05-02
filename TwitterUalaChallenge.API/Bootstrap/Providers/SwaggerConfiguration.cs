@@ -26,21 +26,7 @@ public static class SwaggerConfiguration
             {
                 options.IncludeXmlComments(text);
             }
-
-            options.AddSecurityRequirement(new OpenApiSecurityRequirement
-            {
-                {
-                    new OpenApiSecurityScheme
-                    {
-                        Reference = new OpenApiReference
-                        {
-                            Type = ReferenceType.SecurityScheme,
-                            Id = "Bearer"
-                        }
-                    },
-                    new List<string>()
-                }
-            });
+            
         });
         return services;
     }
