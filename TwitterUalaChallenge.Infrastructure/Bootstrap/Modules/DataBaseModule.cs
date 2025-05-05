@@ -51,7 +51,8 @@ internal class DataBaseModule<TDbContext>(Assembly assembly) : Autofac.Module
         builder.RegisterAssemblyTypes(assembly, assembly1)
             .Where(t => t.Name.EndsWith("Repository"))
             .AsImplementedInterfaces()
-            .InstancePerLifetimeScope();
+            .InstancePerLifetimeScope()
+            .OnRegistered(e => Console.WriteLine($"Registered: {e.ComponentRegistration.Activator.LimitType.Name}"));
     }
 
     private void RegisterUnitOfWork(ContainerBuilder builder)

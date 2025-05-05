@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+
 namespace TwitterUalaChallenge.Common.Errors;
 
 public class ApiResponseError
@@ -24,6 +26,7 @@ public class ApiResponseError
 
     public string ErrorCode { get; set; }
     public string ErrorMessage { get; set; }
+    [JsonIgnore]
     public Exception InnerException { get; }
     public string StackTrace { get; }
 }

@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterUalaChallenge.Contra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterUalaChallenge.API", "TwitterUalaChallenge.API\TwitterUalaChallenge.API.csproj", "{CC441708-FD1E-46B3-8011-792D345216A3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterUalaChallenge.Tests", "TwitterUalaChallenge.Tests\TwitterUalaChallenge.Tests.csproj", "{83E79C91-4C94-40BE-A0EE-C52D501C662E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,5 +44,9 @@ Global
 		{CC441708-FD1E-46B3-8011-792D345216A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC441708-FD1E-46B3-8011-792D345216A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC441708-FD1E-46B3-8011-792D345216A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83E79C91-4C94-40BE-A0EE-C52D501C662E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83E79C91-4C94-40BE-A0EE-C52D501C662E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83E79C91-4C94-40BE-A0EE-C52D501C662E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83E79C91-4C94-40BE-A0EE-C52D501C662E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

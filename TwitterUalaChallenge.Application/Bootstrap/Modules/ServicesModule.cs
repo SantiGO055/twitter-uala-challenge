@@ -23,6 +23,7 @@ internal class ServicesModule : Autofac.Module
         builder.RegisterAssemblyTypes(_assembly)
             .Where(t => t.Name.EndsWith("Service"))
             .AsImplementedInterfaces()
-            .InstancePerLifetimeScope();
+            .InstancePerLifetimeScope()
+            .OnRegistered(e => Console.WriteLine($"Registered: {e.ComponentRegistration.Activator.LimitType.Name}"));
     }
 }
