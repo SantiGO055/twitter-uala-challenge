@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using TwitterUalaChallenge.Infrastructure.Persistence;
@@ -11,9 +12,11 @@ using TwitterUalaChallenge.Infrastructure.Persistence;
 namespace TwitterUalaChallenge.Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(TwitterUalaChallengeDbContext))]
-    partial class TwitterUalaChallengeDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250504231225_Initial")]
+    partial class Initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
