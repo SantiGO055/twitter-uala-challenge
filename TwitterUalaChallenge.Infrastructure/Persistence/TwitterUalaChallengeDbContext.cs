@@ -15,7 +15,9 @@ namespace TwitterUalaChallenge.Infrastructure.Persistence
         {
         }
 
-        public DbSet<Test> Entities { get; set; }
+        public DbSet<Follow> Follows { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Tweet> Tweets { get; set; }
 
         protected override string DefaultSchemaName => "TwitterUalaChallenge";
     }
