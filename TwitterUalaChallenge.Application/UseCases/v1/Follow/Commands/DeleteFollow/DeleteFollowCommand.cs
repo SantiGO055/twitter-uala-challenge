@@ -1,7 +1,6 @@
-﻿using TwitterUalaChallenge.Common.DTOs;
-using TwitterUalaChallenge.Contracts.Core.Application;
+﻿using TwitterUalaChallenge.Contracts.Core.Application;
 
-namespace TwitterUalaChallenge.Application.UseCases.v1.Users.Commands.DeleteFollow;
+namespace TwitterUalaChallenge.Application.UseCases.v1.Follow.Commands.DeleteFollow;
 
 public class DeleteFollowCommand : Request<bool>
 {

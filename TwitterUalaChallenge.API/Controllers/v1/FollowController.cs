@@ -3,9 +3,8 @@ using System.Threading.Tasks;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
+using TwitterUalaChallenge.Application.UseCases.v1.Follow.Commands.DeleteFollow;
 using TwitterUalaChallenge.Application.UseCases.v1.Users.Commands.CreateFollow;
-using TwitterUalaChallenge.Application.UseCases.v1.Users.Commands.CreateTweet;
-using TwitterUalaChallenge.Application.UseCases.v1.Users.Commands.DeleteFollow;
 using TwitterUalaChallenge.Common.DTOs;
 using TwitterUalaChallenge.Common.Errors;
 
@@ -24,10 +23,10 @@ public class FollowController(IMediator mediator) : BaseController(mediator)
     [SwaggerResponse(200, "Ok")]
     [SwaggerResponse(400, "Bad request", Type = typeof(ApiResponseError))]
     [HttpPost]
-    public async Task<IActionResult> Create([FromBody] FollowRequest request)
+    public async Task<bool> Create([FromBody] FollowRequest request)
     {
         var command = new CreateFollowCommand(request);
-        return await ExecuteRequest<CreateFollowCommand, bool>(command);
+        return await mediator.Send(command);
     }
 
     /// <remarks>
@@ -38,9 +37,9 @@ public class FollowController(IMediator mediator) : BaseController(mediator)
     [SwaggerResponse(200, "Ok")]
     [SwaggerResponse(400, "Bad request", Type = typeof(ApiResponseError))]
     [HttpDelete("{followerId:guid}/{followedId:guid}")]
-    public async Task<IActionResult> Delete(Guid followerId, Guid followedId)
+    public async Task<bool> Delete(Guid followerId, Guid followedId)
     {
         var command = new DeleteFollowCommand { FollowerId = followerId, FollowedId = followedId };
-        return await ExecuteRequest<DeleteFollowCommand, bool>(command);
+        return await mediator.Send(command);
     }
 }

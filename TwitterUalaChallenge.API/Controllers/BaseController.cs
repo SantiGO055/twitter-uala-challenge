@@ -11,12 +11,5 @@ public class BaseController(IMediator mediator) : Controller
 {
     protected readonly IMediator _mediator = mediator;
 
-    protected async Task<IActionResult> ExecuteRequest<TRequest, TResponse>(TRequest request)
-        where TRequest : Request<TResponse>
-    {
-        var response = await _mediator.Send(request);
 
-        var apiResponse = ApiResponse<TResponse>.Success(HttpStatusCode.OK, response);
-        return Ok(apiResponse);
-    }
 }

@@ -2,8 +2,7 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
-using TwitterUalaChallenge.Application.UseCases.v1.Users.Commands.CreateTweet;
-using TwitterUalaChallenge.Application.UseCases.v1.Users.Commands.CreateUser;
+using TwitterUalaChallenge.Application.UseCases.v1.Tweet.Commands.CreateTweet;
 using TwitterUalaChallenge.Common.DTOs;
 using TwitterUalaChallenge.Common.Errors;
 
@@ -22,8 +21,8 @@ public class TweetController(IMediator mediator) : BaseController(mediator)
     [SwaggerResponse(200, "Ok", Type = typeof(TweetResponse))]
     [SwaggerResponse(400, "Bad request", Type = typeof(ApiResponseError))]
     [HttpPost]
-    public async Task<IActionResult> Create([FromBody] CreateTweetCommand request)
+    public async Task<TweetResponse> Create([FromBody] CreateTweetCommand request)
     {
-        return await ExecuteRequest<CreateTweetCommand, TweetResponse>(request);
+        return await mediator.Send(request);
     }
 }

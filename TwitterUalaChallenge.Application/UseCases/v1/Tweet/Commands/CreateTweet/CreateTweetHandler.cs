@@ -2,7 +2,7 @@
 using TwitterUalaChallenge.Application.Services.Interfaces;
 using TwitterUalaChallenge.Common.DTOs;
 
-namespace TwitterUalaChallenge.Application.UseCases.v1.Users.Commands.CreateTweet;
+namespace TwitterUalaChallenge.Application.UseCases.v1.Tweet.Commands.CreateTweet;
 
 public class CreateTweetHandler(ITweetService contentService) : IRequestHandler<CreateTweetCommand, TweetResponse>
 {

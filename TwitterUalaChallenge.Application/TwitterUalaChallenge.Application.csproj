@@ -14,6 +14,8 @@
 
     <ItemGroup>
         <Folder Include="DTOs\"/>
+        <Folder Include="UseCases\v1\Follow\Commands\" />
+        <Folder Include="UseCases\v1\Tweet\Commands\" />
     </ItemGroup>
 
     <ItemGroup>

@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace TwitterUalaChallenge.Application.UseCases.v1.Users.Commands.CreateUser;
+namespace TwitterUalaChallenge.Application.UseCases.v1.Follow.Commands.CreateUser;
 
 public class CreateUserValidator : AbstractValidator<CreateUserCommand>
 {

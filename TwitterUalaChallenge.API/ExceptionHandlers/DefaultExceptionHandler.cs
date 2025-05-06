@@ -29,6 +29,6 @@ public static class DefaultExceptionHandler
                 "Ha ocurrido un error inesperado. Por favor, contacte con el soporte tecnico.");
         }
 
-        return ApiResponse<string>.Failure(HttpStatusCode.InternalServerError, responseError);
+        return new ApiResponse<string>(HttpStatusCode.InternalServerError, responseError.ToString());
     }
 }

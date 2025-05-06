@@ -1,6 +1,5 @@
 ﻿using MediatR;
 using TwitterUalaChallenge.Application.Services.Interfaces;
-using TwitterUalaChallenge.Application.UseCases.v1.Users.Commands.CreateTweet;
 using TwitterUalaChallenge.Common.DTOs;
 
 namespace TwitterUalaChallenge.Application.UseCases.v1.Users.Commands.CreateFollow;

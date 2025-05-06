@@ -9,6 +9,7 @@
     <ItemGroup>
         <Folder Include="Bootstrap\Providers\"/>
         <Folder Include="Persistence\Migrations\"/>
+        <Folder Include="Persistence\Queries\" />
     </ItemGroup>
 
     <ItemGroup>

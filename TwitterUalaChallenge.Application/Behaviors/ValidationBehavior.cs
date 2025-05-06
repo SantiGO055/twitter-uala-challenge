@@ -1,6 +1,7 @@
 using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.Logging;
+using TwitterUalaChallenge.Common.Exceptions;
 
 namespace TwitterUalaChallenge.Application.Behaviors;
 

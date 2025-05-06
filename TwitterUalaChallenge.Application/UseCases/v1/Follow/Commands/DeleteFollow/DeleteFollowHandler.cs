@@ -1,8 +1,7 @@
 ﻿using MediatR;
 using TwitterUalaChallenge.Application.Services.Interfaces;
-using TwitterUalaChallenge.Application.UseCases.v1.Users.Commands.CreateFollow;
 
-namespace TwitterUalaChallenge.Application.UseCases.v1.Users.Commands.DeleteFollow;
+namespace TwitterUalaChallenge.Application.UseCases.v1.Follow.Commands.DeleteFollow;
 
 public class DeleteFollowHandler(IFollowService followService): IRequestHandler<DeleteFollowCommand, bool>
 {

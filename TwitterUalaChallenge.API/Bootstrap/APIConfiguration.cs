@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 using Microsoft.Extensions.Configuration;
 using TwitterUalaChallenge.API.Bootstrap.Providers;
+using TwitterUalaChallenge.Common.Responses;
 
 namespace TwitterUalaChallenge.API.Bootstrap
 {
@@ -14,6 +15,7 @@ namespace TwitterUalaChallenge.API.Bootstrap
             var assembly = Assembly.GetExecutingAssembly();
             services.AddCoreAPIServices(configuration, assembly);
             services.AddExceptionHandlers();
+            services.AddScoped(typeof(ApiResponse<>));
 
             return services;
         }
@@ -26,6 +28,7 @@ namespace TwitterUalaChallenge.API.Bootstrap
         {
             var assembly = Assembly.GetExecutingAssembly();
             app.UseCoreAPIMiddlewares(assembly);
+
 
             return app;
         }

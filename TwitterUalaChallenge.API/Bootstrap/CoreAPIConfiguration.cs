@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using TwitterUalaChallenge.API.Bootstrap.Providers;
+using TwitterUalaChallenge.API.ExceptionHandlers;
 using TwitterUalaChallenge.API.Middlewares;
 using TwitterUalaChallenge.Common.Constants;
 
@@ -20,6 +21,8 @@ public static class CoreAPIConfiguration
         CorsConfiguration.AddCors(services);
         services.AddVersioning();
         services.AddCommonSwaggerConfigurations();
+        services.AddExceptionHandler<ValidationCustomExceptionHandler>();
+        services.AddProblemDetails();
 
         return services;
     }
@@ -27,13 +30,14 @@ public static class CoreAPIConfiguration
     public static IApplicationBuilder UseCoreAPIMiddlewares(this IApplicationBuilder app, Assembly assembly)
     {
         app.UseRouting();
-        app.UseMiddleware<ExceptionHandlingMiddleware>();
+        // app.UseMiddleware<ExceptionHandlingMiddleware>();
         app.UseSwagger(assembly);
         app.UseCors(GlobalConstants.CorsPolicyName);
         app.UseHttpsRedirection();
         app.UseAuthentication();
         app.UseAuthorization();
         app.UseHeaderPropagation();
+        app.UseExceptionHandler();
 
         app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
 

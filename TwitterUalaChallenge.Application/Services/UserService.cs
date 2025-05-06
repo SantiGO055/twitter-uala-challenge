@@ -1,6 +1,5 @@
 ﻿using System.Net;
 using TwitterUalaChallenge.Application.Services.Interfaces;
-using TwitterUalaChallenge.Application.UseCases.v1.Users.Commands.CreateUser;
 using TwitterUalaChallenge.Common.DTOs;
 using TwitterUalaChallenge.Common.Errors;
 using TwitterUalaChallenge.Common.Exceptions;

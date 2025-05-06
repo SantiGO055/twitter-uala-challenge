@@ -1,5 +1,4 @@
-﻿using TwitterUalaChallenge.Application.UseCases.v1.Users.Commands.CreateUser;
-using TwitterUalaChallenge.Common.DTOs;
+﻿using TwitterUalaChallenge.Common.DTOs;
 using TwitterUalaChallenge.Domain.Entities;
 
 namespace TwitterUalaChallenge.Application.Services.Interfaces;

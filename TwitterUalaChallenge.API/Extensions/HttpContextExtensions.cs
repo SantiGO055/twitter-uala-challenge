@@ -7,11 +7,11 @@ namespace TwitterUalaChallenge.API.Extensions;
 
 public static class HttpContextExtensions
 {
-    public static async Task WriteJsonResponseAsync<T>(this HttpContext context, ApiResponse<T> apiResponse)
+    public static async Task WriteJsonResponseAsync<T>(this HttpContext context, ApiResponse<T> apiResponse) where T : class
     {
         var response = context.Response;
         response.ContentType = "application/json";
-        response.StatusCode = (int)apiResponse.HttpStatusCode;
+
 
         string jsonResponse;
 

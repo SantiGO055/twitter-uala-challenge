@@ -2,7 +2,7 @@
 using TwitterUalaChallenge.Application.Services.Interfaces;
 using TwitterUalaChallenge.Common.DTOs;
 
-namespace TwitterUalaChallenge.Application.UseCases.v1.Users.Commands.CreateUser;
+namespace TwitterUalaChallenge.Application.UseCases.v1.Follow.Commands.CreateUser;
 
 public class CreateUserHandler(IUserService userService) : IRequestHandler<CreateUserCommand, UserResponse>
 {
