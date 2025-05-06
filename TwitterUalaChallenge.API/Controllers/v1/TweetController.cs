@@ -24,8 +24,6 @@ public class TweetController(IMediator mediator) : BaseController(mediator)
     [HttpPost]
     public async Task<IActionResult> Create([FromBody] CreateTweetCommand request)
     {
-        var res = await mediator.Send(request);
-        return Ok(res);
-        // return await ExecuteRequest<CreateTweetCommand, TweetResponse>(request);
+        return await ExecuteRequest<CreateTweetCommand, TweetResponse>(request);
     }
 }
