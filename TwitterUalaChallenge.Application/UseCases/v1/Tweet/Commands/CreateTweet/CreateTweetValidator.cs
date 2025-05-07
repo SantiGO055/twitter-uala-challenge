@@ -7,9 +7,8 @@ public class CreateTweetValidator: AbstractValidator<CreateTweetCommand>
     public CreateTweetValidator()
     {
         RuleFor(x => x.UserId)
-            .NotEmpty().WithMessage("La propiedad es requerida.")
-            .NotEqual(Guid.Empty)
-            .WithMessage("La propiedad no puede estar vacia");;
+            .NotEmpty()
+            .WithMessage("La propiedad es requerida.");
 
 
         RuleFor(x => x.Content)

@@ -41,7 +41,7 @@ public class TweetService(ITweetRepository entityTweetRepository, IUserService u
                 }
             }).ToList(),
             page,
-            totalTweets,
+            limit,
             totalTweets
         );
     }

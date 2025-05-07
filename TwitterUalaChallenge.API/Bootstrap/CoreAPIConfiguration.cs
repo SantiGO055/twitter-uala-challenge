@@ -22,6 +22,8 @@ public static class CoreAPIConfiguration
         services.AddVersioning();
         services.AddCommonSwaggerConfigurations();
         services.AddExceptionHandler<ValidationCustomExceptionHandler>();
+        services.AddExceptionHandler<BusinessExceptionHandler>();
+        services.AddExceptionHandler<ClientExceptionHandler>();
         services.AddProblemDetails();
 
         return services;

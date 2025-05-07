@@ -14,7 +14,7 @@ using TwitterUalaChallenge.Contracts.Core.Api.ExceptionHandler.Base;
 
 namespace TwitterUalaChallenge.API.ExceptionHandlers;
 
-public class ValidationCustomExceptionHandler: BaseExceptionHandler<FluentValidation.ValidationException>
+public class ValidationCustomExceptionHandler: BaseExceptionHandler<FluentValidation.ValidationException>, IExceptionHandler
 {
     protected override void SetResponse(ApiResponse<object> responseResult, ValidationException exception)
     {

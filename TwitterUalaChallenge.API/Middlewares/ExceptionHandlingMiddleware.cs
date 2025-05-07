@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Microsoft.AspNetCore.Diagnostics;
 using TwitterUalaChallenge.API.ExceptionHandlers;
 using TwitterUalaChallenge.API.Extensions;
 using TwitterUalaChallenge.Common.Options;
@@ -77,7 +78,7 @@ public class ExceptionHandlingMiddleware
     private static Type GetGenericExceptionType(IBaseExceptionHandler handler)
     {
         var interfaceType = handler.GetType().GetInterfaces()
-            .FirstOrDefault(i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(IExceptionHandler<>));
+            .FirstOrDefault(i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(IExceptionHandler));
 
         if (interfaceType != null)
         {
@@ -85,6 +86,6 @@ public class ExceptionHandlingMiddleware
         }
 
         throw new InvalidOperationException(
-            $"Handler {handler.GetType().Name} no implementa {typeof(IExceptionHandler<>).Name}.");
+            $"Handler {handler.GetType().Name} no implementa {nameof(IExceptionHandler)}.");
     }
 }

@@ -12,7 +12,7 @@ public class BusinessExceptionHandler : BaseExceptionHandler<BusinessException>
     protected override void SetResponse(ApiResponse<object> responseResult, BusinessException exception)
     {
         responseResult.Status = "BusinessError";
-        responseResult.Message = exception.Message;
+        responseResult.Message = exception.ApiErrorType.ErrorMessage;
     }
 
     protected override int SetHttpResponseCode()

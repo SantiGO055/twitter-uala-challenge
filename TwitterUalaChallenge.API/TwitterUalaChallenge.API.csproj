@@ -19,7 +19,7 @@
         <PackageReference Include="Microsoft.AspNetCore.Mvc.ApiExplorer" Version="2.2.0"/>
         <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.1.0"/>
         <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.1.0"/>
-        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.10">
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.13">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
