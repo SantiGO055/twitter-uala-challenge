@@ -32,7 +32,6 @@ public static class CoreAPIConfiguration
     public static IApplicationBuilder UseCoreAPIMiddlewares(this IApplicationBuilder app, Assembly assembly)
     {
         app.UseRouting();
-        // app.UseMiddleware<ExceptionHandlingMiddleware>();
         app.UseSwagger(assembly);
         app.UseCors(GlobalConstants.CorsPolicyName);
         app.UseHttpsRedirection();
